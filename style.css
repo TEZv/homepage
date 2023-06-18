@@ -326,11 +326,11 @@ Experience and additional info styles
 }
 
 .additional-info__languages-header {
-  color: var(--secondary-text-color);
+  color: var(--primary-text-color);
   text-align: left;
   margin-bottom: 20px;
 }
 
 .additional-info__languages-item {
-  color: var(--secondary-text-color);
+  color: var(--primary-text-color);
 }
