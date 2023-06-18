@@ -14,7 +14,27 @@ General styles
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
-
+  background: conic-gradient(
+      from 0deg at 50% 50%,
+      rgba(62, 62, 255, 0.424),
+      rgba(15, 238, 250, 0.809),
+      rgba(0, 255, 0, 0) 35%
+    ),
+    conic-gradient(
+      from 90deg at 50% 50%,
+      rgba(247, 254, 112, 0.976),
+      rgba(255, 0, 0, 0) 25%
+    ),
+    conic-gradient(
+      from 180deg at 50% 50%,
+      rgba(62, 62, 255, 0.882),
+      rgba(0, 0, 255, 0) 25%
+    ),
+    conic-gradient(
+      from 270deg at 50% 50%,
+      rgba(62, 62, 255, 0.424),
+      rgba(0, 0, 255, 0) 35%
+    );
   --primary-text-color: rgb(57, 255, 242);
   --secondary-text-color: rgb(248, 255, 57);
   /*--secondary-text-color: #5c5c62;*/
@@ -22,10 +42,11 @@ body {
   --icon-color: #6a737d;
   --border-color: #fbff00;
   --text-decoration-color: #00b3ff;
-  --black: black;
+  --black: rgb(0, 0, 0);
+  background-color: var(--black);
 }
 
-.gradient-background {
+/*.gradient-background {
   background: conic-gradient(
       from 0deg at 50% 50%,
       rgba(15, 238, 250, 0.809),
@@ -70,17 +91,24 @@ body {
     background-position: 100% 100%, 0 0, 100% 0;
   }
 }
-
+*/
 .container {
   margin: 0 auto;
   padding: 0 30px;
   max-width: 900px;
 }
 
+.flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
 .fh {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
+  margin-bottom: -10px;
 }
 
 .fv {
@@ -151,7 +179,8 @@ Contact info styles
 .contact-info__block {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
+  margin-top: -20px;
 }
 
 .contact-info__block--center {
@@ -166,7 +195,7 @@ Contact info styles
 }
 
 .contact-info__item:not(:last-child) {
-  margin-bottom: 20px;
+  margin-bottom: -100px;
 }
 
 .contact-info__item-icon-wrapper {
@@ -187,8 +216,8 @@ Contact info styles
 
 .contact-info__avatar {
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
   border: 3px solid;
   border-color: var(--text-decoration-color);
@@ -201,7 +230,7 @@ Intro and skills styles
 */
 .intro {
   display: flex;
-  justify-content: start;
+  justify-content: center;
 }
 
 .intro__icon-wrapper {
@@ -222,7 +251,7 @@ Intro and skills styles
 
 .intro_text {
   color: var(--secondary-text-color);
-  text-align: justify;
+  text-align: center;
 }
 
 .skills__header {
@@ -231,9 +260,15 @@ Intro and skills styles
   margin-bottom: 15px;
 }
 
+.hobbies__header {
+    color: var(--secondary-text-color);
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
 .skills__text {
   color: var(--secondary-text-color);
-  text-align: justify;
+  text-align: center;
 }
 
 /*
@@ -242,19 +277,20 @@ Experience and additional info styles
 ////////////////////////////////////////////////////////
 */
 .experiences {
-  flex: 1 1 60%;
+  flex: 1 1 70%;
   margin-right: 50px;
+  justify-content: center;
 }
 
 .experiences__header {
   color: var(--secondary-text-color);
-  text-align: left;
+  text-align: center;
   margin-bottom: 20px;
 }
 
 .experiences__company-header-durability {
   color: var(--durability-text-color);
-  text-align: left;
+  text-align: center;
   margin-bottom: 10px;
   font-size: 15px;
 }
@@ -263,7 +299,7 @@ Experience and additional info styles
   color: var(--primary-text-color);
   text-decoration-color: var(--text-decoration-color);
   text-decoration-line: underline;
-  text-align: left;
+  text-align: center;
   margin-bottom: 20px;
 }
 
@@ -274,20 +310,22 @@ Experience and additional info styles
 
 .experiences__company-project-role {
   color: var(--durability-text-color);
-  text-align: left;
+  text-align: center;
   margin-bottom: 10px;
   font-size: 15px;
 }
 
 .experiences__company-project-name {
   color: var(--primary-text-color);
-  text-align: left;
+  text-align: center;
   margin-bottom: 10px;
 }
 
 .experiences__company-project-responsibilities {
   color: var(--secondary-text-color);
   padding-left: 20px;
+  text-align: center;
+  list-style-type: none;
 }
 
 .additional-info {
@@ -300,34 +338,36 @@ Experience and additional info styles
 
 .additional-info__education-header {
   color: var(--secondary-text-color);
-  text-align: left;
+  text-align: center;
   margin-bottom: 20px;
 }
 
 .additional-info__education-university-durability {
   color: var(--durability-text-color);
-  text-align: left;
+  text-align: center;
   margin-bottom: 10px;
   font-size: 15px;
 }
 
 .additional-info__education-university-speciality {
   color: var(--primary-text-color);
-  text-align: left;
+  text-align: center;
   margin-bottom: 10px;
 }
 
 .additional-info__education-university-name {
   color: var(--secondary-text-color);
+  text-align: center;
 }
 
 .additional-info__languages {
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .additional-info__languages-header {
   color: var(--primary-text-color);
-  text-align: left;
+  text-align: center;
   margin-bottom: 20px;
 }
 
