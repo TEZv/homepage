@@ -8,30 +8,33 @@ General styles
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: rgb(57, 255, 242);
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
 
-  --primary-text-color: #181820;
-  --secondary-text-color: #5c5c62;
+  --primary-text-color: rgb(57, 255, 242);
+  --secondary-text-color: rgb(248, 255, 57);
+  /*--secondary-text-color: #5c5c62;*/
   --durability-text-color: #6a737d9c;
   --icon-color: #6a737d;
   --border-color: #fbff00;
   --text-decoration-color: #00b3ff;
+  --black: black;
 }
 
 .gradient-background {
   background: conic-gradient(
       from 0deg at 50% 50%,
       rgba(15, 238, 250, 0.809),
-      rgba(0, 255, 0, 0) 25%
+      rgba(0, 255, 0, 0) 35%
     ),
     conic-gradient(
       from 90deg at 50% 50%,
       rgba(247, 254, 112, 0.976),
-      rgba(255, 0, 0, 0) 35%
+      rgba(255, 0, 0, 0) 25%
     ),
     conic-gradient(
       from 180deg at 50% 50%,
@@ -41,13 +44,13 @@ body {
     conic-gradient(
       from 270deg at 50% 50%,
       rgba(62, 62, 255, 0.424),
-      rgba(0, 0, 255, 0) 25%
+      rgba(0, 0, 255, 0) 35%
     );
 
   background-size: 150% 150%;
   background-repeat: inherit;
-  animation: gradient-animation 10s infinite;
-  background-color: linear-gradient(90deg, rgba(15, 238, 250, 0.109), rgba(62, 62, 255, 0.882))
+  animation: gradient-animation 15s infinite;
+  background-color: var(--black);
 }
 
 @keyframes gradient-animation {
@@ -55,7 +58,7 @@ body {
     background-position: 0 100%, 0 0, 100% 0;
   }
   25% {
-    background-position: 100% 0, 100% 100%, 100% 100%;
+    background-position: 100% 0,0 100%, 100% 100%;
   }
   50% {
     background-position: 100% 0, 0 0, 100% 100%;
@@ -136,7 +139,7 @@ Contact info styles
 .contact-info__header {
   color: var(--primary-text-color);
   margin-bottom: 15px;
-  text-decoration-color: var(--text-decoration-color);
+  text-decoration-color: var(--border-color);
   text-decoration-line: underline;
 }
 
