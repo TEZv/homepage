@@ -99,9 +99,9 @@ body {
 }
 
 .flex {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .fh {
@@ -261,10 +261,10 @@ Intro and skills styles
 }
 
 .hobbies__header {
-    color: var(--secondary-text-color);
-    text-align: center;
-    margin-bottom: 15px;
-  }
+  color: var(--secondary-text-color);
+  text-align: center;
+  margin-bottom: 15px;
+}
 
 .skills__text {
   color: var(--secondary-text-color);
